@@ -26,10 +26,12 @@ public class CauldronLiguid : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collide) {
-        names.Add(collide.gameObject.name);
-        Destroy(collide.gameObject);
-        foreach (var n in names) {
-            Debug.Log(n);
+        if (transform.position.y == -.9) {
+            names.Add(collide.gameObject.name);
+            Destroy(collide.gameObject);
+            foreach (var n in names) {
+                Debug.Log(n);
+            }
         }
     }
 }
