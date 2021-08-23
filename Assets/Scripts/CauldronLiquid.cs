@@ -24,7 +24,6 @@ public class CauldronLiquid : MonoBehaviour
     {
         if (transform.position.y >= -.9) {
             transform.position = new Vector3(transform.position.x, (float)-.89, transform.position.z);
-            bubbles.SetActive(true);
         }
         if (properties.Count > 0) {
             string final = "";
@@ -49,6 +48,7 @@ public class CauldronLiquid : MonoBehaviour
         if (transform.position.y >= -.99) {
             if (collide.gameObject.tag == "Ingredient") {
                 var ingredient = collide.gameObject.GetComponent<Ingredient>();
+                bubbles.SetActive(true);
                 for (int i = 0; i < ingredient.Properties.Length; i++) {
                     if (properties.ContainsKey(ingredient.Properties[i])) {
                         properties[ingredient.Properties[i]] += ingredient.PropertyStrength[i];
