@@ -551,9 +551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca7ca21c7c52904f9bc12d2ac25c485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names: []
   particle: {fileID: 619900048}
   bubbles: {fileID: 554549980}
+  displayText: {fileID: 223974228}
 --- !u!1001 &130586336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1067,6 +1067,101 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218198518}
   m_Mesh: {fileID: 477525350536967170, guid: 3c09282a2243ba0418078dd68247a74a, type: 3}
+--- !u!1 &223974226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223974227}
+  - component: {fileID: 223974229}
+  - component: {fileID: 223974228}
+  m_Layer: 0
+  m_Name: New Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223974227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223974226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.69900006, z: 0.62500006}
+  m_LocalScale: {x: 0.6666664, y: 0.6666667, z: 0.6666664}
+  m_Children: []
+  m_Father: {fileID: 543450652532620237}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!102 &223974228
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223974226}
+  m_Text: Empty
+  m_OffsetZ: 0
+  m_CharacterSize: 0.02
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 43
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &223974229
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223974226}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &248483581
 GameObject:
   m_ObjectHideFlags: 0
@@ -13351,8 +13446,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Carrot
-  Properties: []
-  PropertyStrength: 
+  Properties:
+  - Night Vision
+  - Healing
+  PropertyStrength: 0400000001000000
   propertyColor: {r: 1, g: 0.5246762, b: 0.13679248, a: 1}
 --- !u!1 &804398249 stripped
 GameObject:
@@ -14885,7 +14982,8 @@ MonoBehaviour:
   Name: Red Mushroom
   Properties:
   - Healing
-  PropertyStrength: 03000000
+  - Regeneration
+  PropertyStrength: 0400000002000000
   propertyColor: {r: 0.8980392, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!1 &1043181236
 GameObject:
@@ -16967,8 +17065,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Carrot
-  Properties: []
-  PropertyStrength: 
+  Properties:
+  - Night Vision
+  - Healing
+  PropertyStrength: 0400000001000000
   propertyColor: {r: 1, g: 0.5254902, b: 0.13725491, a: 1}
 --- !u!1 &1629129955
 GameObject:
@@ -19465,8 +19565,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Carrot
-  Properties: []
-  PropertyStrength: 
+  Properties:
+  - Night Vision
+  - Healing
+  PropertyStrength: 0400000001000000
   propertyColor: {r: 1, g: 0.5254902, b: 0.13725491, a: 1}
 --- !u!1 &2074306918
 GameObject:
@@ -19748,7 +19850,8 @@ MonoBehaviour:
   Name: Red Mushroom
   Properties:
   - Healing
-  PropertyStrength: 03000000
+  - Regeneration
+  PropertyStrength: 0400000002000000
   propertyColor: {r: 0.8962264, g: 0.15641688, b: 0.15641688, a: 1}
 --- !u!33 &471075845902728702
 MeshFilter:
@@ -19777,6 +19880,7 @@ Transform:
   - {fileID: 7131451415921122720}
   - {fileID: 123886421}
   - {fileID: 554549981}
+  - {fileID: 223974227}
   m_Father: {fileID: 2074306919}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19949,8 +20053,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Brown Mushroom
-  Properties: []
-  PropertyStrength: 
+  Properties:
+  - Earth Armor
+  - Regeneration
+  PropertyStrength: 0300000001000000
   propertyColor: {r: 0.6039216, g: 0.4, b: 0.24705882, a: 1}
 --- !u!1 &919132149150755761 stripped
 GameObject:
@@ -19970,8 +20076,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Brown Mushroom
-  Properties: []
-  PropertyStrength: 
+  Properties:
+  - Earth Armor
+  - Regeneration
+  PropertyStrength: 0300000001000000
   propertyColor: {r: 0.6037736, g: 0.3989065, b: 0.24777503, a: 1}
 --- !u!1 &919132149264944916
 GameObject:
@@ -20007,8 +20115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Brown Mushroom
-  Properties: []
-  PropertyStrength: 
+  Properties:
+  - Earth Armor
+  - Regeneration
+  PropertyStrength: 0300000001000000
   propertyColor: {r: 0.6039216, g: 0.4, b: 0.24705882, a: 1}
 --- !u!33 &1002017544939895580
 MeshFilter:
@@ -21361,7 +21471,8 @@ MonoBehaviour:
   Name: Red Mushroom
   Properties:
   - Healing
-  PropertyStrength: 03000000
+  - Regeneration
+  PropertyStrength: 0400000002000000
   propertyColor: {r: 0.8980392, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!4 &7464908909716878706
 Transform:
