@@ -13338,6 +13338,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4970989848755135003, guid: cb052e41728853e4cb25cc649bb68afa, type: 3}
+--- !u!114 &793512846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793512842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee674fdc3a5ac5e4c9e29d5dfcc38e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Carrot
+  Properties: []
+  PropertyStrength: 
+  propertyColor: {r: 1, g: 0.5246762, b: 0.13679248, a: 1}
 --- !u!1 &804398249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f96f855bc87e3a1479adfa21c3a35ccb, type: 3}
@@ -14601,6 +14617,7 @@ GameObject:
   - component: {fileID: 1036846674}
   - component: {fileID: 1036846673}
   - component: {fileID: 1036846672}
+  - component: {fileID: 1036846678}
   m_Layer: 0
   m_Name: Red Mushroom (2)
   m_TagString: Ingredient
@@ -14853,6 +14870,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036846670}
   m_Mesh: {fileID: 7095223698070364054, guid: c8595df395173964781ac86b7e0bdf73, type: 3}
+--- !u!114 &1036846678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036846670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee674fdc3a5ac5e4c9e29d5dfcc38e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Red Mushroom
+  Properties:
+  - Healing
+  PropertyStrength: 03000000
+  propertyColor: {r: 0.8980392, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!1 &1043181236
 GameObject:
   m_ObjectHideFlags: 0
@@ -16920,6 +16954,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4970989848755135003, guid: cb052e41728853e4cb25cc649bb68afa, type: 3}
+--- !u!114 &1592538397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592538393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee674fdc3a5ac5e4c9e29d5dfcc38e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Carrot
+  Properties: []
+  PropertyStrength: 
+  propertyColor: {r: 1, g: 0.5254902, b: 0.13725491, a: 1}
 --- !u!1 &1629129955
 GameObject:
   m_ObjectHideFlags: 0
@@ -19402,6 +19452,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4970989848755135003, guid: cb052e41728853e4cb25cc649bb68afa, type: 3}
+--- !u!114 &2068386121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068386117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee674fdc3a5ac5e4c9e29d5dfcc38e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Carrot
+  Properties: []
+  PropertyStrength: 
+  propertyColor: {r: 1, g: 0.5254902, b: 0.13725491, a: 1}
 --- !u!1 &2074306918
 GameObject:
   m_ObjectHideFlags: 0
@@ -19523,6 +19589,7 @@ GameObject:
   - component: {fileID: 440054910451267242}
   - component: {fileID: 440054910451267241}
   - component: {fileID: 440054910451267240}
+  - component: {fileID: 440054910451267243}
   m_Layer: 0
   m_Name: Red Mushroom
   m_TagString: Ingredient
@@ -19666,6 +19733,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &440054910451267243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440054910451267239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee674fdc3a5ac5e4c9e29d5dfcc38e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Red Mushroom
+  Properties:
+  - Healing
+  PropertyStrength: 03000000
+  propertyColor: {r: 0.8962264, g: 0.15641688, b: 0.15641688, a: 1}
 --- !u!33 &471075845902728702
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19852,11 +19936,43 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc3a92d9e64e87a4aa325fb27c7f2f58, type: 3}
   m_PrefabInstance: {fileID: 647203319}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919132148594554023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148594554022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee674fdc3a5ac5e4c9e29d5dfcc38e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Brown Mushroom
+  Properties: []
+  PropertyStrength: 
+  propertyColor: {r: 0.6039216, g: 0.4, b: 0.24705882, a: 1}
 --- !u!1 &919132149150755761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc3a92d9e64e87a4aa325fb27c7f2f58, type: 3}
   m_PrefabInstance: {fileID: 130586336}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919132149150755762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149150755761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee674fdc3a5ac5e4c9e29d5dfcc38e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Brown Mushroom
+  Properties: []
+  PropertyStrength: 
+  propertyColor: {r: 0.6037736, g: 0.3989065, b: 0.24777503, a: 1}
 --- !u!1 &919132149264944916
 GameObject:
   m_ObjectHideFlags: 0
@@ -19878,6 +19994,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc3a92d9e64e87a4aa325fb27c7f2f58, type: 3}
   m_PrefabInstance: {fileID: 199639676}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919132149354561326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149354561325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee674fdc3a5ac5e4c9e29d5dfcc38e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Brown Mushroom
+  Properties: []
+  PropertyStrength: 
+  propertyColor: {r: 0.6039216, g: 0.4, b: 0.24705882, a: 1}
 --- !u!33 &1002017544939895580
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20772,7 +20904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8081885671789774207}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.27, y: 0.01, z: -0.05}
+  m_LocalPosition: {x: 2.954, y: -0.06, z: -0.05}
   m_LocalScale: {x: 8, y: 8, z: 40}
   m_Children:
   - {fileID: 619900047}
@@ -21070,6 +21202,7 @@ GameObject:
   - component: {fileID: 7459753036441284027}
   - component: {fileID: 7459753036441284026}
   - component: {fileID: 7459753036441284025}
+  - component: {fileID: 7459753036441284028}
   m_Layer: 0
   m_Name: Red Mushroom (1)
   m_TagString: Ingredient
@@ -21213,6 +21346,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7459753036441284028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459753036441284024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee674fdc3a5ac5e4c9e29d5dfcc38e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Red Mushroom
+  Properties:
+  - Healing
+  PropertyStrength: 03000000
+  propertyColor: {r: 0.8980392, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!4 &7464908909716878706
 Transform:
   m_ObjectHideFlags: 0
