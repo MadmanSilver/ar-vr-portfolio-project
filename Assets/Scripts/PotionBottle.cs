@@ -6,6 +6,11 @@ public class PotionBottle : MonoBehaviour
 {
     [Range(0.0f, 1.0f)]public float liquidAlpha = 0.75f;
     public MeshRenderer liquid;
+    public Dictionary<string, int> properties;
+    public string potionName = "Empty Potion";
+    public TextMesh nameText;
+    public string primaryProp = null;
+    public string secondaryProp = null;
 
     private bool filled = false;
     private Material liquidMat;
@@ -29,7 +34,35 @@ public class PotionBottle : MonoBehaviour
             liquidColor.b = otherMat.color.b;
             liquidMat.color = liquidColor;
 
+            properties = new Dictionary<string, int>(collision.gameObject.GetComponent<CauldronLiquid>().properties);
+
+            GenerateName();
+
             filled = true;
         }
+    }
+
+    private void GenerateName() {
+        foreach (KeyValuePair<string, int> pair in properties) {
+            Debug.Log("Before");
+
+            if (primaryProp == null || primaryProp == "") {
+                Debug.Log("if null");
+                primaryProp = pair.Key;
+                secondaryProp = pair.Key;
+            }
+
+            if (properties[primaryProp] < pair.Value) {
+                Debug.Log("if prim");
+                secondaryProp = primaryProp;
+                primaryProp = pair.Key;
+            } else if (properties[secondaryProp] < pair.Value) {
+                Debug.Log("if sec");
+                secondaryProp = pair.Key;
+            }
+        }
+
+        potionName = $"{primaryProp} Potion of {secondaryProp}";
+        nameText.text = potionName;
     }
 }
