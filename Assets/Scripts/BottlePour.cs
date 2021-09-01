@@ -39,4 +39,12 @@ public class BottlePour : MonoBehaviour
         Pouring = false;
         Origin.SetActive(false);
     }
+
+    private void OnTriggerEnter(Collider collide) {
+        if (collide.gameObject.tag == "BaseLiquid")
+        {
+            ParticleSystemRenderer particle = Origin.GetComponent<ParticleSystemRenderer>();
+            particle.material = collide.GetComponent<MeshRenderer>().material;
+        }
+    }
 }
