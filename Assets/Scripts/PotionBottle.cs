@@ -52,7 +52,7 @@ public class PotionBottle : MonoBehaviour
                 secondaryProp = pair.Key;
             }
 
-            if (properties[primaryProp] < pair.Value) {
+            if (properties[primaryProp] <= pair.Value) {
                 Debug.Log("if prim");
                 secondaryProp = primaryProp;
                 primaryProp = pair.Key;
@@ -62,7 +62,7 @@ public class PotionBottle : MonoBehaviour
             }
         }
 
-        potionName = $"{primaryProp} Potion of {secondaryProp}";
+        potionName = properties[secondaryProp] >= 10 ? $"{secondaryProp} Potion of {primaryProp}" : $"Potion of {primaryProp}";
         nameText.text = potionName;
     }
 }
