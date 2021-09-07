@@ -46,7 +46,7 @@ public class CauldronLiquid : MonoBehaviour
 
     void OnCollisionEnter(Collision collide) {
         if (transform.position.y >= -.99) {
-            if (collide.gameObject.tag == "Ingredient") {
+            if (collide.gameObject.tag == "Ingredient" || collide.gameObject.tag == "GroundIngredient") {
                 var ingredient = collide.gameObject.GetComponent<Ingredient>();
                 bubbles.SetActive(true);
                 for (int i = 0; i < ingredient.Properties.Length; i++) {
