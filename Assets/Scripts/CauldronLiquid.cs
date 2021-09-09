@@ -22,8 +22,8 @@ public class CauldronLiquid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y >= -.9) {
-            transform.position = new Vector3(transform.position.x, (float)-.89, transform.position.z);
+        if (transform.position.y >= .71) {
+            transform.position = new Vector3(transform.position.x, (float).7, transform.position.z);
         }
         if (properties.Count > 0) {
             string final = "";
@@ -37,7 +37,8 @@ public class CauldronLiquid : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-         if (transform.position.y < -.9) {
+        if (transform.position.y < .69) {
+            this.gameObject.GetComponent<MeshRenderer>().enabled = true;
             transform.Translate(Vector3.up * Time.deltaTime, Space.World);
             liquidMat.CopyPropertiesFromMaterial(particle.material);
             bubbleMat.CopyPropertiesFromMaterial(particle.material);
@@ -45,7 +46,7 @@ public class CauldronLiquid : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collide) {
-        if (transform.position.y >= -.99) {
+        if (transform.position.y >= .7) {
             if (collide.gameObject.tag == "Ingredient" || collide.gameObject.tag == "GroundIngredient") {
                 var ingredient = collide.gameObject.GetComponent<Ingredient>();
                 bubbles.SetActive(true);
