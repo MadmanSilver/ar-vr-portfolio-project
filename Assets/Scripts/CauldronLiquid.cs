@@ -46,9 +46,17 @@ public class CauldronLiquid : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collide) {
-        if (transform.position.y >= .7) {
+        Debug.Log(transform.position.y);
+        if (transform.position.y >= .68) {
             if (collide.gameObject.tag == "Ingredient" || collide.gameObject.tag == "GroundIngredient") {
                 var ingredient = collide.gameObject.GetComponent<Ingredient>();
+                var avgColor = ingredient.propertyColor;
+                if (properties.Count == 0) {
+                    Debug.Log("top");
+                    avgColor = Color.Lerp(Color.white, ingredient.propertyColor, (float)0.6);
+                } else {
+                    avgColor = Color.Lerp(liquidMat.GetColor("_Color"), ingredient.propertyColor, (float)0.5);
+                }
                 bubbles.SetActive(true);
                 for (int i = 0; i < ingredient.Properties.Length; i++) {
                     if (properties.ContainsKey(ingredient.Properties[i])) {
@@ -57,8 +65,8 @@ public class CauldronLiquid : MonoBehaviour
                         properties[ingredient.Properties[i]] = ingredient.PropertyStrength[i];
                     }
                 }
-                liquidMat.SetColor("_Color", ingredient.propertyColor);
-                bubbleMat.SetColor("_Color", liquidMat.GetColor("_Color"));
+                liquidMat.SetColor("_Color", avgColor);
+                bubbleMat.SetColor("_Color", avgColor);
                 Destroy(collide.gameObject);
             }
         }
