@@ -26,7 +26,7 @@ public class PotionBottle : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.layer == 4 && !filled) {
-            Material otherMat = collision.gameObject.GetComponent<Renderer>().material;
+            Material otherMat = collision.gameObject.transform.parent.gameObject.GetComponent<Renderer>().material;
 
             liquidColor.a = liquidAlpha;
             liquidColor.r = otherMat.color.r;
@@ -34,7 +34,7 @@ public class PotionBottle : MonoBehaviour
             liquidColor.b = otherMat.color.b;
             liquidMat.color = liquidColor;
 
-            properties = new Dictionary<string, int>(collision.gameObject.GetComponent<CauldronLiquid>().properties);
+            properties = new Dictionary<string, int>(collision.gameObject.transform.parent.gameObject.GetComponent<CauldronLiquid>().properties);
 
             GenerateName();
 
