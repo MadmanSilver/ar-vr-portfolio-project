@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class CauldronLiquid : MonoBehaviour
 {
     public Dictionary<string, int> properties;
-    public ParticleSystemRenderer particle;
     public GameObject bubbles;
     private Material liquidMat;
     private Material bubbleMat;
     public TextMesh displayText;
+    public Collider col;
+    public Collider parCol;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,8 @@ public class CauldronLiquid : MonoBehaviour
     {
         if (transform.position.y >= .71) {
             transform.position = new Vector3(transform.position.x, (float).7, transform.position.z);
+            col.enabled = true;
+            parCol.enabled = false;
         }
         if (properties.Count > 0) {
             string final = "";
@@ -35,17 +38,7 @@ public class CauldronLiquid : MonoBehaviour
         }
     }
 
-    void OnParticleCollision(GameObject other)
-    {
-        if (transform.position.y < .69) {
-            this.gameObject.GetComponent<MeshRenderer>().enabled = true;
-            transform.Translate(Vector3.up * Time.deltaTime, Space.World);
-            liquidMat.CopyPropertiesFromMaterial(particle.material);
-            bubbleMat.CopyPropertiesFromMaterial(particle.material);
-        }
-    }
-
-    void OnCollisionEnter(Collision collide) {
+    void OnTriggerEnter(Collider collide) {
         Debug.Log(transform.position.y);
         if (transform.position.y >= .68) {
             if (collide.gameObject.tag == "Ingredient" || collide.gameObject.tag == "GroundIngredient") {
