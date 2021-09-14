@@ -7,6 +7,7 @@ TagManager:
   - Ingredient
   - BaseLiquid
   - GroundIngredient
+  - Stats
   layers:
   - Default
   - TransparentFX
