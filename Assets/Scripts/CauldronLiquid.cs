@@ -41,8 +41,12 @@ public class CauldronLiquid : MonoBehaviour
     void OnTriggerEnter(Collider collide) {
         Debug.Log(transform.position.y);
         if (transform.position.y >= .68) {
-            if (collide.gameObject.tag == "Ingredient" || collide.gameObject.tag == "GroundIngredient") {
-                var ingredient = collide.gameObject.GetComponent<Ingredient>();
+            if (collide.gameObject.tag == "Ingredient" || collide.gameObject.transform.parent.tag == "GroundIngredient") {
+                Ingredient ingredient;
+                if (collide.gameObject.tag == "Ingredient")
+                    ingredient = collide.gameObject.GetComponent<Ingredient>();
+                else
+                    ingredient = collide.gameObject.transform.parent.GetComponent<Ingredient>();
                 var avgColor = ingredient.propertyColor;
                 if (properties.Count == 0) {
                     Debug.Log("top");
@@ -60,7 +64,10 @@ public class CauldronLiquid : MonoBehaviour
                 }
                 liquidMat.SetColor("_Color", avgColor);
                 bubbleMat.SetColor("_Color", avgColor);
-                Destroy(collide.gameObject);
+                if (collide.gameObject.tag == "Ingredient")
+                    Destroy(collide.gameObject);
+                else
+                    Destroy(collide.gameObject.transform.parent.gameObject);
             }
         }
     }
