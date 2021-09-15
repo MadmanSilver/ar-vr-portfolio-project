@@ -8,6 +8,7 @@ TagManager:
   - BaseLiquid
   - GroundIngredient
   - Stats
+  - Button
   layers:
   - Default
   - TransparentFX

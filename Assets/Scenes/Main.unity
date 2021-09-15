@@ -1545,6 +1545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mage Light (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8584470136326941724, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -24038,6 +24042,10 @@ PrefabInstance:
     - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_Name
       value: Mage Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8584470136326941724, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_RootOrder
