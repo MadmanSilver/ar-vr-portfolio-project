@@ -5,17 +5,18 @@ using UnityEngine.UI;
 
 public class CauldronLiquid : MonoBehaviour
 {
-    public Dictionary<string, int> properties;
+    public Dictionary<string, float> properties;
     public GameObject bubbles;
     private Material liquidMat;
     private Material bubbleMat;
     public TextMesh displayText;
     public Collider col;
     public Collider parCol;
+    public string baseName;
     // Start is called before the first frame update
     void Start()
     {
-        properties = new Dictionary<string, int>();
+        properties = new Dictionary<string, float>();
         liquidMat = this.GetComponent<MeshRenderer>().material;
         bubbleMat = bubbles.gameObject.GetComponent<ParticleSystemRenderer>().material;
     }
@@ -30,7 +31,7 @@ public class CauldronLiquid : MonoBehaviour
         }
         if (properties.Count > 0) {
             string final = "";
-            foreach (KeyValuePair<string, int> property in properties)
+            foreach (KeyValuePair<string, float> property in properties)
             {
                 final += $"{property.Key}: {property.Value}\n";
             }
@@ -57,10 +58,11 @@ public class CauldronLiquid : MonoBehaviour
                 bubbles.SetActive(true);
                 for (int i = 0; i < ingredient.Properties.Length; i++) {
                     if (properties.ContainsKey(ingredient.Properties[i])) {
-                        properties[ingredient.Properties[i]] += ingredient.PropertyStrength[i];
+                        properties[ingredient.Properties[i]] += baseCheck(baseName, ingredient.Properties[i], ingredient.PropertyStrength[i]);
                     } else {
-                        properties[ingredient.Properties[i]] = ingredient.PropertyStrength[i];
+                        properties[ingredient.Properties[i]] = baseCheck(baseName, ingredient.Properties[i], ingredient.PropertyStrength[i]);
                     }
+                    Debug.Log(properties[ingredient.Properties[i]]);
                 }
                 liquidMat.SetColor("_Color", avgColor);
                 bubbleMat.SetColor("_Color", avgColor);
@@ -69,6 +71,29 @@ public class CauldronLiquid : MonoBehaviour
                 else
                     Destroy(collide.gameObject.transform.parent.gameObject);
             }
+        }
+    }
+
+    float baseCheck(string bName, string propName, float strength) {
+        switch (bName)
+        {
+            case "Oil":
+                if (propName == "Regeneration")
+                    return strength * 1.5f;
+                else
+                    return strength * .9f;
+            case "Water":
+                return strength;
+            case "Whisky":
+                return strength * 1.1f;
+            case "Wine":
+                if (propName == "Healing") {
+                    return strength * 2f;
+                } else {
+                    return strength * .8f;
+                }
+            default:
+                return strength;
         }
     }
 }

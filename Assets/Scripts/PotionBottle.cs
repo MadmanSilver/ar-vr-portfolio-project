@@ -6,7 +6,7 @@ public class PotionBottle : MonoBehaviour
 {
     [Range(0.0f, 1.0f)]public float liquidAlpha = 0.75f;
     public MeshRenderer liquid;
-    public Dictionary<string, int> properties;
+    public Dictionary<string, float> properties;
     public string potionName = "Empty Potion";
     public TextMesh nameText;
     public string primaryProp = null;
@@ -34,7 +34,7 @@ public class PotionBottle : MonoBehaviour
             liquidColor.b = otherMat.color.b;
             liquidMat.color = liquidColor;
 
-            properties = new Dictionary<string, int>(collision.gameObject.transform.parent.gameObject.GetComponent<CauldronLiquid>().properties);
+            properties = new Dictionary<string, float>(collision.gameObject.transform.parent.gameObject.GetComponent<CauldronLiquid>().properties);
 
             GenerateName();
 
@@ -43,7 +43,7 @@ public class PotionBottle : MonoBehaviour
     }
 
     private void GenerateName() {
-        foreach (KeyValuePair<string, int> pair in properties) {
+        foreach (KeyValuePair<string, float> pair in properties) {
             Debug.Log("Before");
 
             if (primaryProp == null || primaryProp == "") {
