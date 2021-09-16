@@ -9,6 +9,7 @@ TagManager:
   - GroundIngredient
   - Stats
   - Button
+  - Potion
   layers:
   - Default
   - TransparentFX
