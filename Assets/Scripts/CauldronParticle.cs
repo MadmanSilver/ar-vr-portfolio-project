@@ -34,7 +34,8 @@ public class CauldronParticle : MonoBehaviour
             if (lq.baseName == "None" || lq.baseName == "") {
                 Debug.Log(particle.material.name);
                 Debug.Log(particle.material.name.Length);
-                lq.baseName = particle.material.name.Substring(0, particle.material.name.Length - 11);
+                lq.baseName = particle.material.name;
+                lq.baseName = lq.baseName.Replace("(Instance)", "").Replace("(Instance)", "").Replace(" ", "");
             }
         }
     }
