@@ -10,7 +10,6 @@ public class CauldronLiquid : MonoBehaviour
     private Material liquidMat;
     private Material bubbleMat;
     public TextMesh displayText;
-    public Collider col;
     public Collider parCol;
     public string baseName;
     // Start is called before the first frame update
@@ -26,7 +25,6 @@ public class CauldronLiquid : MonoBehaviour
     {
         if (transform.position.y >= .71) {
             transform.position = new Vector3(transform.position.x, (float).7, transform.position.z);
-            col.enabled = true;
             parCol.enabled = false;
         }
         if (properties.Count > 0) {
