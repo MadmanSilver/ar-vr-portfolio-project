@@ -22,7 +22,7 @@ public class Button : MonoBehaviour
     void OnTriggerEnter(Collider collide) {
         if (collide.gameObject.tag == "Button") {
             if (isRestart)
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene(0);
             else {
                 var newObj = Instantiate(spawn);
                 newObj.transform.position = collide.transform.position;
