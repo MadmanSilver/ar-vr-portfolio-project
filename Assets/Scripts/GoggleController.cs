@@ -11,9 +11,6 @@ public class GoggleController : MonoBehaviour
     private bool equipped = true;
 
     void Start() {
-        foreach (GameObject text in GameObject.FindGameObjectsWithTag("Stats")) {
-            text.GetComponent<MeshRenderer>().enabled = false;
-        }
     }
 
     void Update() {
