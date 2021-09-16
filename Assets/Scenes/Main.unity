@@ -17905,6 +17905,7 @@ GameObject:
   - component: {fileID: 1457162719}
   - component: {fileID: 1457162721}
   - component: {fileID: 1457162720}
+  - component: {fileID: 1457162722}
   m_Layer: 0
   m_Name: World Tint
   m_TagString: Untagged
@@ -17975,6 +17976,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457162718}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1457162722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457162718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9359b3d072e13948b5d1a77515a5b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 0.7
 --- !u!1001 &1461225702
 PrefabInstance:
   m_ObjectHideFlags: 0
