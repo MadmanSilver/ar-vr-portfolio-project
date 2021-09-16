@@ -31,8 +31,11 @@ public class CauldronParticle : MonoBehaviour
             liquid.transform.Translate(Vector3.up * Time.deltaTime, Space.World);
             liquidMat.CopyPropertiesFromMaterial(particle.material);
             bubbleMat.CopyPropertiesFromMaterial(particle.material);
-            lq.baseName = particle.material.name;
-            lq.baseName = lq.baseName.Substring(0, lq.baseName.Length - 11);
+            if (lq.baseName == "None" || lq.baseName == "") {
+                Debug.Log(particle.material.name);
+                Debug.Log(particle.material.name.Length);
+                lq.baseName = particle.material.name.Substring(0, particle.material.name.Length - 11);
+            }
         }
     }
 }

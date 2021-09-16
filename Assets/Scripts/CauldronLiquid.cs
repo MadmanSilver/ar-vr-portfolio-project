@@ -11,7 +11,7 @@ public class CauldronLiquid : MonoBehaviour
     private Material bubbleMat;
     public TextMesh displayText;
     public Collider parCol;
-    public string baseName;
+    public string baseName = "None";
     // Start is called before the first frame update
     void Start()
     {
