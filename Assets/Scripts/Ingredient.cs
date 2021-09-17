@@ -17,11 +17,7 @@ public class Ingredient : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string statText = "";
-        for (int i = 0; i < Properties.Length; i++) {
-            statText += $"{Properties[i]}: {PropertyStrength[i]}\n";
-        }
-        text.text = statText;
+        setText();
     }
 
     // Update is called once per frame
@@ -39,6 +35,14 @@ public class Ingredient : MonoBehaviour
             Color tmp = Color.Lerp(propertyColor, Color.black, .1f);
             tmp.a = .5f;
             this.GetComponent<MeshRenderer>().material.SetColor("_Color", tmp);
+            setText();
         }
+    }
+    void setText() {
+        string statText = "";
+        for (int i = 0; i < Properties.Length; i++) {
+            statText += $"{Properties[i]}: {PropertyStrength[i]}\n";
+        }
+        text.text = statText;
     }
 }
