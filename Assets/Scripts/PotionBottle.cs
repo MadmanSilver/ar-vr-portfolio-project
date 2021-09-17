@@ -56,13 +56,13 @@ public class PotionBottle : MonoBehaviour
                 Debug.Log("if prim");
                 secondaryProp = primaryProp;
                 primaryProp = pair.Key;
-            } else if (properties[secondaryProp] < pair.Value) {
+            } else if (properties[secondaryProp] < pair.Value || secondaryProp == primaryProp) {
                 Debug.Log("if sec");
                 secondaryProp = pair.Key;
             }
         }
 
-        potionName = properties[secondaryProp] >= 10 ? $"{secondaryProp} Potion of {primaryProp}" : $"Potion of {primaryProp}";
+        potionName = properties[secondaryProp] >= 10 && primaryProp != secondaryProp ? $"{secondaryProp} Potion of {primaryProp}" : $"Potion of {primaryProp}";
         nameText.text = potionName;
     }
 }
