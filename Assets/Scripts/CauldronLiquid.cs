@@ -53,7 +53,8 @@ public class CauldronLiquid : MonoBehaviour
                 } else {
                     avgColor = Color.Lerp(liquidMat.GetColor("_Color"), ingredient.propertyColor, (float)0.5);
                 }
-                bubbles.SetActive(true);
+                if (!bubbles.activeSelf)
+                    bubbles.SetActive(true);
                 for (int i = 0; i < ingredient.Properties.Length; i++) {
                     if (properties.ContainsKey(ingredient.Properties[i])) {
                         properties[ingredient.Properties[i]] += baseCheck(baseName, ingredient.Properties[i], ingredient.PropertyStrength[i]);
@@ -63,7 +64,7 @@ public class CauldronLiquid : MonoBehaviour
                     Debug.Log(properties[ingredient.Properties[i]]);
                 }
                 liquidMat.SetColor("_Color", avgColor);
-                bubbleMat.SetColor("_Color", avgColor);
+                bubbleMat.SetColor("_Color", ingredient.propertyColor);
                 if (collide.gameObject.tag == "Ingredient")
                     Destroy(collide.gameObject);
                 else
