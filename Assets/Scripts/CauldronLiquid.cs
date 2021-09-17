@@ -90,6 +90,16 @@ public class CauldronLiquid : MonoBehaviour
                 } else {
                     return strength * .8f;
                 }
+            case "Ink":
+                if (propName == "Earth Armor") {
+                    return strength * 1.6f;
+                }
+                else if (propName == "Regeneration") {
+                    return strength * 0.6f;
+                }
+                else {
+                    return strength * .95f;
+                }
             default:
                 return strength;
         }
