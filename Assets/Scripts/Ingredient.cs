@@ -36,6 +36,9 @@ public class Ingredient : MonoBehaviour
             for (int i = 0; i < PropertyStrength.Length; i++) {
                 PropertyStrength[i] -= minVal;
             }
+            Color tmp = Color.Lerp(propertyColor, Color.black, .1f);
+            tmp.a = .5f;
+            this.GetComponent<MeshRenderer>().material.SetColor("_Color", tmp);
         }
     }
 }
