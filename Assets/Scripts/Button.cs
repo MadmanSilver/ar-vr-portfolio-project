@@ -27,7 +27,7 @@ public class Button : MonoBehaviour
                 var newObj = Instantiate(spawn);
                 newObj.transform.position = collide.transform.position;
                 newObj.transform.Translate(Vector3.up * 1.2f, Space.World);
-                newObj.transform.Translate(Vector3.forward * -.5f, Space.World);
+                newObj.transform.Translate(Vector3.forward * .3f, Space.World);
             }
         }
     }
