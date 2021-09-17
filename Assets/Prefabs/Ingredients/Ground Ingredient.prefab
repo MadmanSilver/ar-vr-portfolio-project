@@ -55,6 +55,7 @@ MonoBehaviour:
   propertyColor: {r: 0, g: 0, b: 0, a: 0}
   isInMortar: 0
   text: {fileID: 3928967663040856737}
+  isCooked: 0
 --- !u!54 &4561557110871892030
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -385,7 +386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7142856937320556034
 Transform:
   m_ObjectHideFlags: 0
