@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 3637326559155973970}
   - component: {fileID: -7257044588635810039}
   - component: {fileID: -4854937948937108782}
+  - component: {fileID: -7134110665219443203}
   m_Layer: 0
   m_Name: Mage Light
-  m_TagString: Untagged
+  m_TagString: Mage Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5079,7 +5080,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_AttachEaseInTime: 0.15
-  m_MovementType: 1
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -5114,3 +5115,15 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &-7134110665219443203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668876544076593215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db4658a549a6ce49b8e58ca1417da08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.65
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.24647538, g: 0.28234535, b: 0.3457032, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 80a598dedd598d84d90f6974864a52d9, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 1100e6a0e1bee5542bf211ad3a5b18dd, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1374,6 +1374,105 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a79a448dd55200a498bbe7577b69bdbf, type: 3}
+--- !u!1 &179074423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179074424}
+  - component: {fileID: 179074426}
+  - component: {fileID: 179074425}
+  m_Layer: 0
+  m_Name: New Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179074424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179074423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.796, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1784679073}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!102 &179074425
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179074423}
+  m_Text: 'Wine Glass
+
+    Fireplace
+
+    Ink Bottle'
+  m_OffsetZ: 0
+  m_CharacterSize: 0.02
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 119
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &179074426
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179074423}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &190262500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1555,10 +1654,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896682159}
     m_Modifications:
-    - target: {fileID: -7134110665219443203, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
-      propertyPath: sceneIndex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_Name
       value: Mage Light (1)
@@ -1566,10 +1661,6 @@ PrefabInstance:
     - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
-      propertyPath: m_TagString
-      value: Mage Light
       objectReference: {fileID: 0}
     - target: {fileID: 8584470136326941724, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_RootOrder
@@ -13795,7 +13886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &625717164
 Transform:
   m_ObjectHideFlags: 0
@@ -14811,17 +14902,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896682159}
     m_Modifications:
-    - target: {fileID: -7134110665219443203, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
-      propertyPath: sceneIndex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_Name
       value: Mage Light (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
-      propertyPath: m_TagString
-      value: Mage Light
       objectReference: {fileID: 0}
     - target: {fileID: 7689605272282054417, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_Color.b
@@ -21640,6 +21723,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 810a81e7492ca2243992ef0f78239e68, type: 3}
   m_PrefabInstance: {fileID: 316080947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1784679072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784679073}
+  m_Layer: 0
+  m_Name: Secrets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1784679073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784679072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 179074424}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1789119047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8436309195515284946, guid: 20fbbf6db116fb64d91eaed180d2aa34, type: 3}
@@ -23249,17 +23363,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896682159}
     m_Modifications:
-    - target: {fileID: -7134110665219443203, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
-      propertyPath: sceneIndex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_Name
       value: Mage Light (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
-      propertyPath: m_TagString
-      value: Mage Light
       objectReference: {fileID: 0}
     - target: {fileID: 8584470136326941724, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_RootOrder
@@ -23312,24 +23418,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8584470136326941724, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
   m_PrefabInstance: {fileID: 2045455932}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2045455934 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
-  m_PrefabInstance: {fileID: 2045455932}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2045455935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045455934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2db4658a549a6ce49b8e58ca1417da08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneIndex: 0
 --- !u!1 &2054113303
 GameObject:
   m_ObjectHideFlags: 0
@@ -23632,10 +23720,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896682159}
     m_Modifications:
-    - target: {fileID: -7134110665219443203, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
-      propertyPath: sceneIndex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_Name
       value: Mage Light
@@ -23643,10 +23727,6 @@ PrefabInstance:
     - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 668876544076593215, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
-      propertyPath: m_TagString
-      value: Mage Light
       objectReference: {fileID: 0}
     - target: {fileID: 8584470136326941724, guid: e9425187fd5954049a4ae3335cc543f7, type: 3}
       propertyPath: m_RootOrder
